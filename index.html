@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Ejercicio 05</title>
+  </head>
+
+  <body>
+    <div id="root">
+      <div class="top-bar">
+        <div class="title-container">
+          <h1 class="title-ob">OpenBootcamp</h1>
+          <h1 class="title-students">| Alumnos</h1>
+        </div>
+
+        <div class="select-container">
+          <select class="user-select">
+            <option selected>UserName</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+          <div class="user-profile">NA</div>
+          <div class="chevron"></div>
+        </div>
+      </div>
+
+      <div class="content-container">
+        <div class="table-container">
+          <div class="student-bar">
+            <div class="search-container">
+              <h1 class="title-student">Alumnos</h1>
+              <div class="search-bar">
+                <img class="search-icon" src="search_icon.svg" />
+                <input
+                  id="searchinput"
+                  class="search-input"
+                  type="text"
+                  placeholder="Buscar por Nombre, Email o Palabra clave..."
+                />
+              </div>
+            </div>
+            <button class="btn-addstudent">
+              <img class="plus-icon" src="plus_icon.svg" />
+              Añadir alumnos
+            </button>
+          </div>
+
+          <table id="table" class="students-table">
+            <thead>
+              <tr>
+                <th id="thname">
+                  <div class="th-content">
+                    NOMBRE
+                    <img class="order-icon" src="order_icon.svg" />
+                  </div>
+                </th>
+                <th id="thcity">
+                  <div class="th-content">
+                    CIUDAD
+                    <img class="order-icon" src="order_icon.svg" />
+                  </div>
+                </th>
+                <th id="thcountry">
+                  <div class="th-content">
+                    PAÍS
+                    <img class="order-icon" src="order_icon.svg" />
+                  </div>
+                </th>
+                <th>
+                  <div class="th-content">TELÉFONO</div>
+                </th>
+                <th id="themail">
+                  <div class="th-content">
+                    CORREO ELECTRÓNICO
+                    <img class="order-icon" src="order_icon.svg" />
+                  </div>
+                </th>
+                <th id="thskills">
+                  <div class="th-content">
+                    ETIQUETAS
+                    <img class="order-icon" src="order_icon.svg" />
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="tablebody"></tbody>
+          </table>
+        </div>
+
+        <div class="filter-container">
+          <div class="filter-title-container">
+            <h1 class="filter-section-title">Filtros de búsqueda</h1>
+            <img class="trash-icon" src="trash_icon.svg" />
+          </div>
+
+          <div class="filter-section-container">
+            <h1 class="filter-title">Etiquetas</h1>
+            <div class="filter-select-container">
+              <input
+                type="text"
+                list="skills"
+                class="skills-select-input"
+                placeholder="Escribe para buscar..."
+              />
+              <datalist id="skills">
+                <option>HTML&CSS</option>
+                <option>JavaScript</option>
+              </datalist>
+              <div class="chevron skills-select-chevron"></div>
+            </div>
+            <div class="selected-skills-container">
+              <div class="selected-skill">
+                HTML&CSS
+                <img class="cross-icon" src="cross_icon.svg" />
+              </div>
+              <div class="selected-skill">
+                REACT
+                <img class="cross-icon" src="cross_icon.svg" />
+              </div>
+              <div class="selected-skill">
+                ANGULAR
+                <img class="cross-icon" src="cross_icon.svg" />
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-section-container">
+            <h1 class="filter-title">País</h1>
+            <div class="filter-select-container">
+              <select class="location-select">
+                <option selected value="spain">España</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="filter-section-container">
+            <h1 class="filter-title">Ciudad</h1>
+            <div class="filter-select-container">
+              <select class="location-select">
+                <option selected value="valencia">Valencia</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="filter-section-container">
+            <h1 class="filter-title">Presencial / a distancia</h1>
+            <label class="filter-option">
+              <input type="radio" name="presence" value="inoffice" />
+              Presencial
+            </label>
+            <label class="filter-option">
+              <input type="radio" name="presence" value="remote" />
+              En remoto
+            </label>
+          </div>
+
+          <div class="filter-section-container">
+            <h1 class="filter-title">Posibilidad traslado</h1>
+            <label class="filter-option">
+              <input type="radio" name="transfer" value="yes" />
+              Sí
+            </label>
+            <label class="filter-option">
+              <input type="radio" name="transfer" value="no" />
+              No
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
